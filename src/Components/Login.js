@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault()
 
         dispatch(login({
-            username:username,
+            name:username,
             loggedIn:true
 
         }))
