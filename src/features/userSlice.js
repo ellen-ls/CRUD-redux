@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
     name:"user",
     initialState:{
-        user:null
+        user:[]
     },
     reducers:{
         login:(state, action)=>{
@@ -11,11 +11,16 @@ export const userSlice = createSlice({
         },
         logout:(state)=>{
             state.user = null
+        },
+        addPost:(state, action) =>{
+            state.user.push()
+            console.log(action)
+
         }
     }
 })
 
-export const {login, logout} = userSlice.actions;
+export const {login, logout, addPost} = userSlice.actions;
 
 export const selectUser = (state)=> state.user.user
 
